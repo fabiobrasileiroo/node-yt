@@ -1,0 +1,15 @@
+{
+  "name": "yt",
+  "version": "1.0.0",
+  "description": "estudo de node um pouco mais antigo para enteder as tecnologias novas com knex e fastify",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node --watch ./index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
