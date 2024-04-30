@@ -1,6 +1,6 @@
-const Sequilize = require('sequelize')
+const Sequelize = require('sequelize')
 
-const sequelize = new Sequilize('teste','root','fabiofhmb99',{
+const sequelize = new Sequelize('teste','root','C,03x1LSOxv8',{// note:fabiofhmb99 // pc: C,03x1LSOxv8
   host: "localhost",
   dialect: "mysql",
 })
@@ -13,28 +13,29 @@ const sequelize = new Sequilize('teste','root','fabiofhmb99',{
 
 const Postagem = sequelize.define("postagens",{
   titulo: {
-    type: Sequilize.STRING
+    type: Sequelize.STRING
   },
   conteudo: {
-    type: Sequilize.TEXT 
+    type: Sequelize.TEXT 
   }
 })
 Postagem.create({
-  titulo: "Um titulo Qualquer"
+  titulo: "Um titulo Qualquer",
+  conteudo: 'qualquer'
 })
 
 const Usuario = sequelize.define('usuarios',{
   nome: {
-    type: Sequilize.STRING
+    type: Sequelize.STRING
   },
   sobrenome: {
-    type: Sequilize.STRING
+    type: Sequelize.STRING
   },
   idade: {
-    type: Sequilize.INTEGER
+    type: Sequelize.INTEGER
   },
   email: {
-    type: Sequilize.STRING
+    type: Sequelize.STRING
   }
 })
 Usuario.create({
@@ -44,4 +45,4 @@ Usuario.create({
   email: "blabla@email.com",
 })
 
-Usuario.sync({force:true})
+// Usuario.sync({force:true})
